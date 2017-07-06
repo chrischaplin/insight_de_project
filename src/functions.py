@@ -155,9 +155,9 @@ def parse_stream_record(record,person_dict,unique_id,strecord,network):
             # Add (or delete) the connection
         if event_type == 'befriend':             
             #connection_list.append((person_id,friend_id))
-            network.add_edges_from([person_id,friend_id])
+            network.add_edge(person_id,friend_id)
         else:
-            network.remove_edges_from([person_id,friend_id])
+            network.remove_edge(person_id,friend_id)
             
             #forward_connection = (person_id,friend_id)
             #backward_connection = (friend_id,person_id)
