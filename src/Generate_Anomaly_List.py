@@ -71,10 +71,10 @@ node_list = nx.nodes(my_network)
 # but I am going to use brute force due to lack of time
 #
 # Loop over nodes
-for i in range(0,len(node_list)):
-    
-    # Grab valid node
-    node = node_list[i]
+#
+# (This loop no longer works since node_list is not returning a list of ints)
+#
+for node in node_list:
     
     # Grab cutoff-level neighbors
     neighbors = nx.single_source_shortest_path_length(my_network, node, cutoff=D)
